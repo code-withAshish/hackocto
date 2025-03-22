@@ -1,0 +1,56 @@
+services:
+  bootnode:
+    image: ethereum/client-go:latest
+    container_name: bootnode
+    command: ["bootnode", "--nodekey=/config/boot.key", "--addr=0.0.0.0:30301"]
+    volumes:
+      - ./config:/config
+    ports:
+      - "30301:30301/udp"
+      - "30301:30301/tcp"
+    restart: always
+
+  nethermind:
+    image: nethermind/nethermind:latest
+    container_name: nethermind
+    depends_on:
+      - bootnode
+    entrypoint: ["/nethermind/Nethermind.Runner"]
+    command:
+      - "--config=/config/nethermind.json"
+      - "--JsonRpc.Enabled=true"
+      - "--JsonRpc.Host=0.0.0.0"
+      - "--JsonRpc.Port=8545"
+      - "--Network.DiscoveryPort=30303"
+      - "--Init.ChainSpecPath=/config/chainspec.json"
+      - "--Metrics.Enabled=true"
+    volumes:
+      - ./config:/config
+      - ./data/nethermind:/nethermind/data
+    ports:
+      - "8545:8545"
+      - "30303:30303"
+    restart: always
+
+  lighthouse:
+    image: sigp/lighthouse:latest
+    container_name: lighthouse
+    depends_on:
+      - nethermind
+    entrypoint: ["/lighthouse/lighthouse"]
+    command:
+      - "bn"
+      - "--debug-level=info"
+      - "--datadir=/data/lighthouse"
+      - "--execution-endpoint=http://nethermind:8551"
+      - "--network=custom"
+      - "--custom-config=/config/lighthouse-config.yaml"
+      - "--http"
+      - "--http-address=0.0.0.0"
+      - "--http-port=5052"
+    volumes:
+      - ./config:/config
+      - ./data/lighthouse:/data/lighthouse
+    ports:
+      - "5052:5052"
+    restart: always

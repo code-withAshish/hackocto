@@ -1,0 +1,29 @@
+{
+    "$schema": "https://raw.githubusercontent.com/NethermindEth/core-scripts/refs/heads/main/schemas/config.json",
+   "Init":{
+    "ChainSpecPath": "/config/chainspec.json",
+    "BaseDbPath": "/nethermind/data",
+    "LogFileName": "nethermind.log",
+    "LogDirectory": "/nethermind/logs",
+    "LogRules": "info"
+   },
+   "Network":{
+    "DiscoveryPort": 30303,
+    "P2PPort": 30303,
+    "Bootnodes":  [
+      "enode://<BOOTNODE_ENODE>@bootnode:30301"
+    ]
+   },
+   "JsonRpc":{
+    "Enabled": true,
+    "Host": "0.0.0.0",
+    "Port": 8545,
+    "EnginePort": 8551,
+    "EnabledModules": ["eth","net","web3","engine"]
+   },
+   "Metrics":{
+    "Enabled": true,
+    "ExposePort": 8008
+    
+   }
+}
