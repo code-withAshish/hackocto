@@ -1,0 +1,17 @@
+participants:
+  - el_type: reth
+    el_image: ghcr.io/paradigmxyz/reth
+    cl_type: lighthouse
+    cl_image: sigp/lighthouse:latest
+  - el_type: reth
+    el_image: ghcr.io/paradigmxyz/reth
+    cl_type: lighthouse
+    cl_image: sigp/lighthouse:latest
+  - el_type: reth
+    el_image: ghcr.io/paradigmxyz/reth
+    cl_type: lighthouse
+    cl_image: sigp/lighthouse:latest
+  - el_type: reth
+    el_image: ghcr.io/paradigmxyz/reth
+    cl_type: lighthouse
+    cl_image: sigp/lighthouse:latest
