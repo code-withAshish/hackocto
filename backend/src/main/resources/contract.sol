@@ -1,30 +1,21 @@
-pragma solidity 0.8.7;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
 
-contract VendingMachine {
-
-    // Declare state variables of the contract
-    address public owner;
-    mapping (address => uint) public cupcakeBalances;
-
-    // When 'VendingMachine' contract is deployed:
-    // 1. set the deploying address as the owner of the contract
-    // 2. set the deployed smart contract's cupcake balance to 100
-    constructor() {
-        owner = msg.sender;
-        cupcakeBalances[address(this)] = 100;
+contract CertificateRegistry {
+    struct Certificate {
+        string studentName;
+        string course;
+        uint256 dateIssued;
     }
 
-    // Allow the owner to increase the smart contract's cupcake balance
-    function refill(uint amount) public {
-        require(msg.sender == owner, "Only the owner can refill.");
-        cupcakeBalances[address(this)] += amount;
+    mapping(string => Certificate) public certificates;
+
+    function issueCertificate(string memory studentId, string memory studentName, string memory course) public {
+        certificates[studentId] = Certificate(studentName, course, block.timestamp);
     }
 
-    // Allow anyone to purchase cupcakes
-    function purchase(uint amount) public payable {
-        require(msg.value >= amount * 1 ether, "You must pay at least 1 ETH per cupcake");
-        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
-        cupcakeBalances[address(this)] -= amount;
-        cupcakeBalances[msg.sender] += amount;
+    function verifyCertificate(string memory studentId) public view returns (string memory, string memory, uint256) {
+        Certificate memory cert = certificates[studentId];
+        return (cert.studentName, cert.course, cert.dateIssued);
     }
 }
