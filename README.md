@@ -1,10 +1,19 @@
-> ### ⚠️ Warning: This Project is not live yet and is for demo purposes only
-
-# 🎓 Decentralized Academic Credential Verification
+# 🚀 Decentralized Academic Credential Verification
 
 🎯 *"Bringing trust, security, and efficiency to academic credential verification through blockchain."* 🚀
 
-### 📌 **Overview**
+> ##### ⚠️ Warning: This Project is not live yet and is for demo purposes only
+
+
+## 🔍 **At a Glance**
+✅ **Blockchain-powered** → Trustless degree verification  
+✅ **Fraud-proof** → Immutable records prevent tampering  
+✅ **Instant verification** → No waiting, no middlemen  
+✅ **Cost-efficient & scalable** → Only ~2GB per college/year  
+
+---
+
+## 📌 **Overview**
 The current degree verification system is **slow, expensive, and prone to fraud**. Employers and institutions struggle with verifying academic credentials, leading to inefficiencies and trust issues.
 
 This project aims to **eliminate fake certificates and enable instant verification** through a **private Ethereum-based blockchain**, where **each college runs its own node** and issues tamper-proof certificates.
@@ -29,6 +38,14 @@ This system consists of multiple **colleges running their own blockchain nodes**
 
 ---
 
+## 🔄 **How It Works**
+1️⃣ **Colleges run their own blockchain nodes**  
+2️⃣ **Degrees are issued as smart contracts** and stored immutably  
+3️⃣ **Students receive a unique hash** for verification  
+4️⃣ **Employers verify instantly using blockchain API**  
+
+---
+
 ## 🚀 **Features**
 ✅ **Decentralized & Trustless** – No central authority required; colleges manage their own credentials.  
 ✅ **Immutable & Fraud-Proof** – Certificates stored on blockchain cannot be altered.  
@@ -49,7 +66,7 @@ This system consists of multiple **colleges running their own blockchain nodes**
 ### **Smart Contracts & Backend**
 - **Solidity** – Smart contract development
 - **Hardhat** – Smart contract deployment & testing
-- **NestJS / Spring Boot** – Backend API
+- **Spring Boot** – Backend API
 - **Ethers.js** – Blockchain interaction
 
 ### **Frontend**
@@ -70,6 +87,7 @@ This system consists of multiple **colleges running their own blockchain nodes**
 
 ---
 
+
 ## 🙌 **Contributing**
 This is a **hackathon project**, and contributions are welcome for improving the demo. Submit a pull request or open an issue for discussions.
 
@@ -77,8 +95,5 @@ This is a **hackathon project**, and contributions are welcome for improving the
 
 ## 📩 **Contact**
 For inquiries, reach out at: **uic.24mca20282@gmail.com**
-
----
-
 
 
