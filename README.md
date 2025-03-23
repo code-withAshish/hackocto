@@ -11,7 +11,6 @@
 ✅ **Instant verification** → No waiting, no middlemen  
 ✅ **Cost-efficient & scalable** → Only ~2GB per college/year  
 
----
 
 ## 📌 **Overview**
 The current degree verification system is **slow, expensive, and prone to fraud**. Employers and institutions struggle with verifying academic credentials, leading to inefficiencies and trust issues.
@@ -28,7 +27,6 @@ Unlike traditional centralized databases, this system ensures **decentralized, t
 
 With blockchain, we provide a **secure, instant, and cost-effective solution** that empowers colleges, students, and employers.
 
----
 
 ## 🏗 **Architecture**
 
@@ -36,7 +34,6 @@ With blockchain, we provide a **secure, instant, and cost-effective solution** t
 
 This system consists of multiple **colleges running their own blockchain nodes** while remaining part of a **shared, permissioned Ethereum-based network**. Each college independently issues degrees using **smart contracts**, and verification happens via a decentralized lookup mechanism.
 
----
 
 ## 🔄 **How It Works**
 1️⃣ **Colleges run their own blockchain nodes**  
@@ -44,7 +41,7 @@ This system consists of multiple **colleges running their own blockchain nodes**
 3️⃣ **Students receive a unique hash** for verification  
 4️⃣ **Employers verify instantly using blockchain API**  
 
----
+
 
 ## 🚀 **Features**
 ✅ **Decentralized & Trustless** – No central authority required; colleges manage their own credentials.  
@@ -55,7 +52,7 @@ This system consists of multiple **colleges running their own blockchain nodes**
 ✅ **Fault-Tolerant** – If a college node goes offline, it syncs back automatically when restored.  
 ✅ **Interoperable & Extensible** – Can be integrated with existing university systems, government agencies, and HR databases.
 
----
+
 
 ## 🔧 **Tech Stack**
 ### **Blockchain Clients**
@@ -76,7 +73,7 @@ This system consists of multiple **colleges running their own blockchain nodes**
 - **PostgreSQL / MongoDB** – Storing additional certificate details
 - **IPFS (Optional)** – Decentralized document storage
 
----
+
 
 ## 📊 **Storage & Cost Analysis**
 - **On-Chain Storage Growth** → ~2GB per college per year.  
@@ -85,13 +82,12 @@ This system consists of multiple **colleges running their own blockchain nodes**
 - **Estimated Cost Per College** → $800 – $3000 per year.  
 - **Projected Network Costs** → If fully adopted across **45,000+ institutions**, the total cost remains **scalable and manageable**, ensuring broad adoption potential.
 
----
 
 
 ## 🙌 **Contributing**
 This is a **hackathon project**, and contributions are welcome for improving the demo. Submit a pull request or open an issue for discussions.
 
----
+
 
 ## 📩 **Contact**
 For inquiries, reach out at: **uic.24mca20282@gmail.com**
