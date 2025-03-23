@@ -93,7 +93,7 @@ To maintain consistency and readability, follow these coding standards:
   @RestController
   @RequestMapping("/certificates")
   public class CertificateController {
-      ...
+      // rest of the code
   }
   ```
 
